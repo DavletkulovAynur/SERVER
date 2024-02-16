@@ -1,8 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule as NestTypeOrmModule } from '@nestjs/typeorm';
 
-console.log(process.env);
-
 const isDev = false;
 @Module({
   imports: [
