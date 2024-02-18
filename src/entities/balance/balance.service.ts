@@ -1,13 +1,13 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Investment } from './investment.entity';
+import { Balance } from './balance.entity';
 
 @Injectable()
-export class InvestmentService {
+export class BalanceService {
   constructor(
-    @InjectRepository(Investment)
-    private readonly investmentRepository: Repository<Investment>,
+    @InjectRepository(Balance)
+    private readonly BalanceRepository: Repository<Balance>,
   ) {}
 
   // public async createOperation(newOperation) {

@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { InvestModule } from './entities/investment/investment.module';
 import { ConfigModule } from './config.module';
 import { TypeOrmModule } from './db/typeorm.module';
+import { BalanceModule } from './entities/balance/balance.module';
 
 @Module({
-  imports: [InvestModule, ConfigModule, TypeOrmModule],
+  imports: [BalanceModule, ConfigModule, TypeOrmModule],
 })
 export class AppModule {}
