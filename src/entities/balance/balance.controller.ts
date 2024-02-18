@@ -1,5 +1,6 @@
-import { Controller, Get, HttpCode, HttpStatus } from '@nestjs/common';
+import { Controller, Get, HttpCode, HttpStatus, Res } from '@nestjs/common';
 import { BalanceService } from './balance.service';
+import { Response } from 'express'; // Make sure to import Response from 'express'
 
 @Controller('balance')
 export class BalanceController {
@@ -7,7 +8,8 @@ export class BalanceController {
 
   @Get('/')
   @HttpCode(HttpStatus.OK)
-  async getAllInvestments() {
-    return 'heello world';
+  async getAllInvestments(@Res() res: Response) {
+    const data = { message: 'hello world' };
+    return res.json(data);
   }
 }
